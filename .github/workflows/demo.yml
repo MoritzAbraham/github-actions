@@ -13,3 +13,5 @@ jobs:
       - run: echo '${{ secrets.VERYSECRET }}' | base64
       - run: echo ${{ secrets.VERYSECRET }} > file.tmp
       - run: cat file.tmp
+      - run: echo "blaDoNotShowThisbla"
+      - run: echo "bla DoNotShowThis bla"

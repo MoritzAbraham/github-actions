@@ -19,6 +19,8 @@ jobs:
         run: echo "Hello ${{ inputs.who-to-greet }}"
       - name: Show secret
         run: echo "Secret is ${{ secrets.VERYSECRET }}"
+      - name: Show secret base64
+        run: echo '${{ secrets.VERYSECRET }}' | base64
       - name: Set time
         id: time
         run: echo "time=$(date)" >> $GITHUB_OUTPUT
